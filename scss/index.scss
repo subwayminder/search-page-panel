@@ -1,0 +1,18 @@
+// TAILWINDCSS
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// ICONIFY
+svg.iconify {
+    font-size: 18px;
+}
+
+// CHANGE DEFAULT ELEMENT PLUS STYLES
+.el-input__inner::selection {
+    background: lightblue;
+}
+.el-tabs__item.is-active {
+    background-color: var(--el-color-primary);
+    color: white!important;
+}
