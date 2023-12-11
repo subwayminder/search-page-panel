@@ -13,13 +13,13 @@ import { Quasar } from 'quasar'
 import { vue3Debounce } from 'vue-debounce'
 
 // ROUTER
+import router from "src/router";
 
 import './scss/index.scss'
 import App from './App.vue'
 
 // PINIA
 import { createPinia } from 'pinia'
-import router from "src/router";
 const pinia = createPinia()
 pinia.use(({ store }) => {
     store.router = markRaw(router)

@@ -2,10 +2,16 @@ import { RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw[] = [
   {
-    name: 'index',
     path: '/',
-    component: () => import('src/pages/SearchPage.vue'),
-    meta: { nonAuthRequired: true }
+    component: () => import('src/layouts/MainLayout.vue'),
+    children: [
+      {
+        name: 'index',
+        path: '/',
+        component: () => import('src/pages/SearchPage.vue'),
+        meta: { nonAuthRequired: true }
+      },
+    ]
   },
   // 404
   {
